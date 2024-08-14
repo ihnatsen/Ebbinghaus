@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS Cards(
 
 CREATE TABLE IF NOT EXISTS Sentences(
     SentenceID INTEGER primary key autoincrement,
+    Sentence text,
     Translate text,
     ConstructionID INTEGER,
     FOREIGN KEY (ConstructionID) REFERENCES Constructions

@@ -22,6 +22,12 @@ class Skeleton(ABC):
     def get_all_construction(self) -> list[tuple[str]]:
         raise NotImplementedError
 
+
+    @abstractmethod
+    def get_all_name_rules(self) -> list[tuple[str]]:
+        raise NotImplementedError
+
+
     @abstractmethod
     def get_words_by_card(self, card) -> list[tuple[str]]:
         raise NotImplementedError
@@ -43,7 +49,7 @@ class Skeleton(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def add_new_sentence(self, translation, constructionID):
+    def add_new_sentence(self, translation, constructionID, sentence):
         raise NotImplementedError
 
     @abstractmethod
