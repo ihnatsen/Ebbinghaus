@@ -3,13 +3,13 @@ CREATE TABLE IF NOT EXISTS Words(
     Spelling text,
     Pronunciation text,
     Translate text,
-    CartID integer,
+    CardID integer,
     Rang integer,
-    FOREIGN KEY (CartID) REFERENCES Carts
+    FOREIGN KEY (CardID) REFERENCES Cards
 );
 
-CREATE TABLE IF NOT EXISTS Carts(
-    CartID INTEGER primary key autoincrement,
+CREATE TABLE IF NOT EXISTS Cards(
+    CardID INTEGER primary key autoincrement,
     Name text
 );
 
@@ -28,5 +28,6 @@ CREATE TABLE IF NOT EXISTS Constructions(
 
 CREATE TABLE IF NOT EXISTS Rules(
     RuleID INTEGER primary key autoincrement,
-    Rule text
+    Rule text,
+    Name text
 )
