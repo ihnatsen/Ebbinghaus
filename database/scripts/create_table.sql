@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS Words(
     Translate text,
     CardID integer,
     Rang integer,
+    TimeRepeat text,
     FOREIGN KEY (CardID) REFERENCES Cards
 );
 
